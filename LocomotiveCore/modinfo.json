@@ -1,0 +1,13 @@
+{
+    "type": "code",
+    "modid": "locomotivecore",
+    "name": "Locomotive Core",
+    "authors": [
+        "TheDarkElites"
+    ],
+    "description": "Adds support for minecarts, rails, and other train adjacent things.",
+    "version": "1.0.0",
+    "dependencies": {
+        "game": ""
+    }
+}

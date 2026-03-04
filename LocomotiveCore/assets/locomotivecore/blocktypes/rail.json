@@ -1,0 +1,63 @@
+{
+  "code": "railtrack",
+  "creativeinventory": {
+    "general": [ "*-ns" ],
+    "LocomotiveCore": [ "*" ]
+  },
+  "blockmaterial": "Stone",
+  "resistance": 3.5,
+  "textures": {
+    "metalrail": { "base": "locomotivecore:block/metalrail" },
+    "woodsupport": { "base": "game:block/wood/oak" }
+  },
+  "shape": {
+    "base": "locomotivecore:shapes/block/straighttrack",
+    "rotateYByType": {
+      "*-ns": 0,
+      "*-we": 90
+    }},
+    "collisionboxes": [
+      {
+        "x1": 0,
+        "y1": 0,
+        "z1": 0,
+        "x2": 1,
+        "y2": 0.125,
+        "z2": 1
+      }
+    ],
+    "selectionboxes": [
+      {
+        "x1": 0,
+        "y1": 0,
+        "z1": 0,
+        "x2": 1,
+        "y2": 0.125,
+        "z2": 1
+      }
+    ],
+    "sounds": {
+      "place": "game:block/anvil",
+      "walk": "game:walk/stone"
+    },
+    "sideopaque": {
+      "north": false,
+      "south": false,
+      "east": false,
+      "west": false,
+      "up": false,
+      "down": false
+    },
+    "behaviors": [
+      { "name": "NWOrientable" }
+    ],
+    "variantgroups": [
+      {
+        "code": "orientation",
+        "states": [
+          "ns",
+          "we"
+        ]
+      }
+    ]
+  }
