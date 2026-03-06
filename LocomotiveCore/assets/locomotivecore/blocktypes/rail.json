@@ -2,7 +2,7 @@
   "code": "railtrack",
   "creativeinventory": {
     "general": [ "*-ns" ],
-    "LocomotiveCore": [ "*" ]
+    "LocomotiveCore": [ "*-ns" ]
   },
   "blockmaterial": "Stone",
   "resistance": 3.5,

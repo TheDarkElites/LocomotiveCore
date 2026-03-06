@@ -1,0 +1,23 @@
+{
+  "code": "test_minecart",
+  "class": "EntityAgent",
+  "hitboxSize": { "x": 1.0, "y": 0.8 },
+  "selectionBoxSize": { "x": 1.0, "y": 0.8 },
+  "client": {
+    "renderer": "Shape",
+    "shape": { "base": "locomotivecore:entity/testminecart" },
+    "textures": {
+      "metal": { "base": "locomotivecore:entity/metal" },
+      "wood": { "base": "game:block/wood/oak" },
+      "null": { "base": "locomotivecore:entity/metal" }
+    },
+    "behaviors": [
+      { "name": "creature" }
+    ]
+  },
+  "server": {
+    "behaviors": [
+      { "name": "creature" }
+    ]
+  }
+}

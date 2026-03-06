@@ -1,3 +1,6 @@
 {
-    "hello": "hello world!"
+    "hello": "hello world!",
+    "game:tabname-LocomotiveCore": "Locomotive Core",
+    "block-railtrack-ns": "Rails",
+    "block-railtrack-we": "Rails"
 }
