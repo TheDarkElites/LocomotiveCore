@@ -1,8 +1,46 @@
 {
   "code": "test_minecart",
-  "class": "EntityAgent",
+  "class": "MinecartEntity",
   "hitboxSize": { "x": 1.0, "y": 0.8 },
   "selectionBoxSize": { "x": 1.0, "y": 0.8 },
+  "weight": 120,
+  "attributes" : {
+    "mountAnimations": {
+      "idle": "sitboatidle",
+      "ready": "",
+      "forwards": "",
+      "backwards": ""
+    }
+  },
+  "behaviorConfigs": {
+    "creaturecarrier": {
+      "seats": [
+        {
+          "apName": "Seat",
+          "mountOffset": { "x":1.55, "z":1.4},
+          "bodyYawLimit": 0.4,
+          "eyeHeight": 1
+        }
+      ]
+    },
+    "selectionboxes": {
+      "selectionBoxes": ["Seat"]
+    },
+    "rideableaccessories": {
+      "dropContentsOnDeath": true,
+      "wearableSlots": [
+        {
+          "code": "Seat",
+          "forCategoryCodes": []
+        }
+      ]
+    },
+    "passivephysics": {
+      "groundDragFactor": 0.8,
+      "airDragFallingFactor": 0.5,
+      "gravityFactor": 1.0
+    }
+  },
   "client": {
     "renderer": "Shape",
     "shape": { "base": "locomotivecore:entity/testminecart" },
@@ -12,12 +50,21 @@
       "null": { "base": "locomotivecore:entity/metal" }
     },
     "behaviors": [
-      { "name": "creature" }
+      { "code": "creaturecarrier" },
+      { "code": "selectionboxes" },
+      { "code": "rideableaccessories"},
+      { "code": "passivephysics" },
+      { "code": "interpolateposition" },
+      { "code": "repulseagents"}
     ]
   },
   "server": {
     "behaviors": [
-      { "name": "creature" }
+      { "code": "creaturecarrier" },
+      { "code": "selectionboxes" },
+      { "code": "rideableaccessories"},
+      { "code": "passivephysics" },
+      { "code": "repulseagents"}
     ]
   }
 }
