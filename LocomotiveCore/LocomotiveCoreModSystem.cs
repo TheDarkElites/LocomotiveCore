@@ -11,6 +11,8 @@ namespace LocomotiveCore
         public override void Start(ICoreAPI api)
         {
             Mod.Logger.Notification("Hello from template mod: " + Lang.Get("locomotivecore:hello"));
+            api.RegisterEntity("MinecartEntity", typeof(MinecartEntity));
+            api.RegisterMountable("EntityMinecartSeat", EntityMinecartSeat.GetMountable);
         }
 
         public override void StartServerSide(ICoreServerAPI api)
